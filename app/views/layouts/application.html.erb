@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aeeiko</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand"><a href="#">AEEIKO</a>
+      </li>
+      <li><a href="#">首页</a>
+      </li>
+      <li class="panel dropdown">
+        <a data-toggle="collapse" data-parent="#menu-bar" href="#collapseOne">
+          产品介绍
+        </a>
+        <ul id="collapseOne" class="panel-collapse collapse">
+          <li><a href="#">票夹/银包</a></li>
+          <li><a href="#">手包</a></li>
+          <li><a href="#">背包</a></li>
+          <li><a href="#">公文包</a></li>
+          <li><a href="#">拉杆箱</a></li>
+          <li><a href="#">背包</a></li>
+        </ul>
+      </li>
+      <li class="panel dropdown"> <!-- We add the panel class to workaround collapsing menu items in Bootstrap -->
+        <a data-toggle="collapse" data-parent="#menu-bar" href="#collapseTwo">
+          了解我们
+        </a>
+        <ul id="collapseTwo" class="panel-collapse collapse"> <!-- Notice the ID of this element must match the href attribute in the <a> element above it. Also we have added the panel-collapse class -->
+          <li><a href="#">公司简介</a></li>
+          <li><a href="#">品牌故事</a></li>
+          <li><a href="#">品牌理念</a></li>
+          <li><a href="#">品牌定位</a></li>
+          <li><a href="#">AEEIKO 生活</a></li>
+        </ul>
+      </li>
+      <li><a href="#">新闻咨询</a></li>
+      <li><a href="#">产品介绍</a></li>
+      <li><a href="#">招商咨询</a></li>
+      <li><a href="#">友情链接</a></li>
+      <li><a href="#">招商咨询</a></li>
+    </ul>
+  </div>
+
+  <!-- Page content -->
+  <div id="page-content-wrapper">
+    <div class="content-header">
+      <h1>
+        <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
+        Simple Sidebar
+      </h1>
+    </div>
+    <!-- Keep all page content within the page-content inset div! -->
+    <div class="page-content inset">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead">This simple sidebar template has a hint of JavaScript to make the template responsive. It also includes Font Awesome icon fonts.</p>
+        </div>
+        <div class="col-md-6">
+          <p class="well">The template still uses the default Bootstrap rows and columns.</p>
+        </div>
+        <div class="col-md-6">
+          <p class="well">But the full-width layout means that you wont be using containers.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="well">Three Column Example</p>
+        </div>
+        <div class="col-md-4">
+          <p class="well">Three Column Example</p>
+        </div>
+        <div class="col-md-4">
+          <p class="well">You get the idea! Do whatever you want in the page content area!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%= yield %>
+</body>
+</html>
