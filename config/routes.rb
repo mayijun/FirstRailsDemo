@@ -1,4 +1,7 @@
 Aeeiko::Application.routes.draw do
+
+  get '/news/index'
+
   resources :news
 
   resources :products
