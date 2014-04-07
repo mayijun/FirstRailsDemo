@@ -1,4 +1,6 @@
 Aeeiko::Application.routes.draw do
+  resources :news
+
   resources :products
 
   get "welcome/index"
