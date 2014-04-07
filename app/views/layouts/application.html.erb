@@ -15,14 +15,14 @@
     <ul class="sidebar-nav">
       <li class="sidebar-brand"><a href="#">AEEIKO</a>
       </li>
-      <li class="panel"><a href="#">首页</a>
+      <li class="panel"><%= link_to '首页',root_path %></a>
       </li>
       <li class="panel">
         <a data-toggle="collapse" data-parent="#menu-bar" href="#collapseOne">
           产品介绍
         </a>
         <ul id="collapseOne" class="panel-collapse collapse">
-          <li><a href="#">票夹/银包</a></li>
+          <li><%= link_to '票夹/银包', products_path%></a></li>
           <li><a href="#">手包</a></li>
           <li><a href="#">背包</a></li>
           <li><a href="#">公文包</a></li>
@@ -52,13 +52,10 @@
 
   <!-- Page content -->
   <div id="page-content-wrapper">
-    <div class="content-header">
-      <h1>
-        <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
-        Simple Sidebar
-      </h1>
-    </div>
+    <%= yield %>
+
     <!-- Keep all page content within the page-content inset div! -->
+    <!--
     <div class="page-content inset">
       <div class="row">
         <div class="col-md-12">
@@ -81,10 +78,11 @@
         </div>
       </div>
     </div>
+    -->
   </div>
 
 </div>
 
-<%= yield %>
+
 </body>
 </html>
