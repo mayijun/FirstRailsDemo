@@ -5,4 +5,5 @@
 *= require spree/frontend
 *= require_self
 *= require_tree .
+ *= require spree/frontend/spree_i18n
 */
