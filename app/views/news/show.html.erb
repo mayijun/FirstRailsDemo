@@ -15,5 +15,18 @@
   <%= @news.image_url %>
 </p>
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
+<ul class="thumbnails">
+  <li class="span4">
+    <div class="thumbnail"><img alt="300x200" src="img/people.jpg" />
+      <div class="caption" contenteditable="true">
+        <h3><%=@news.title %></h3>
+
+        <p><%=@news.content%></p>
+
+        <p><a class="btn btn-primary" href="#">浏览</a> <a class="btn" href="#">分享</a></p>
+      </div>
+    </div>
+  </li>
+</ul>
+
 <%= link_to 'Back', news_index_path %>
